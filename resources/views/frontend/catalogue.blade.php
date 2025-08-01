@@ -10,13 +10,13 @@
                 <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
                     <div class="card h-100 shadow-sm position-relative" style="width: 100%;">
                         @if ($catalogue->latestFile)
-                            <a href="{{ asset('storage/' . $catalogue->latestFile->file_path) }}" target="_blank"
+                            <a href="{{ asset( $catalogue->latestFile->file_path) }}" target="_blank"
                                 class="stretched-link"></a>
                         @endif
                         <div class="card-body text-center">
                             <h2 class="mb-3">{{ $catalogue->name }}</h2>
                             @if ($catalogue->logo)
-                                <img src="{{ asset('storage/' . $catalogue->logo) }}" alt="{{ $catalogue->name }}"
+                                <img src="{{ asset( $catalogue->logo) }}" alt="{{ $catalogue->name }}"
                                     class="img-fluid" style="height: 180px; object-fit: contain;">
                             @else
                                 <p class="text-muted">No Logo</p>

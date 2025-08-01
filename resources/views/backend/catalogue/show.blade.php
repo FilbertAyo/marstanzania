@@ -16,6 +16,35 @@
         </div>
     </div>
 
+    {{-- Success Message --}}
+    @if (session('success'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ session('success') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
+
+    {{-- Error Message --}}
+    @if (session('error'))
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            {{ session('error') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
+
+    {{-- Validation Errors --}}
+    @if ($errors->any())
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>There were some issues:</strong>
+            <ul class="mb-0 mt-1">
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
+
 
     <div class="row">
 
@@ -43,7 +72,7 @@
                             <tbody>
 
                                 @forelse($catalogue->files as $index => $file)
-                                    <tr class="clickable-row" data-href="{{ asset('storage/' . $file->file_path) }}"
+                                    <tr class="clickable-row" data-href="{{ asset( $file->file_path) }}"
                                         style="cursor: pointer;">
                                         <td>{{ $index + 1 }}</td>
                                         <td>{{ $file->user->name }}</td>

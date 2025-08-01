@@ -15,7 +15,7 @@ class CatalogueController extends Controller
 
     public function catalogue()
     {
-       $catalogues = Catalogue::with('latestFile')->get();
+        $catalogues = Catalogue::with('latestFile')->get();
 
         return view('frontend.catalogue', compact('catalogues'));
     }
@@ -37,10 +37,18 @@ class CatalogueController extends Controller
     {
         $request->validate([
             'name' => 'required|string|unique:catalogues,name',
-            'logo' => 'required|image|max:2048',
+            'logo' => 'required|image|max:4048',
         ]);
 
-        $logoPath = $request->file('logo')->store('logo', 'public');
+        // Generate a unique name for the image
+        $logo = $request->file('logo');
+        $logoName = time() . '_' . $logo->getClientOriginalName();
+
+        // Move the uploaded file to the public/logo directory
+        $logo->move(public_path('logo'), $logoName);
+
+        // Save the path relative to the public folder
+        $logoPath = 'logo/' . $logoName;
 
         Catalogue::create([
             'name' => $request->name,
@@ -49,6 +57,7 @@ class CatalogueController extends Controller
 
         return redirect()->back()->with('success', 'Catalogue added successfully.');
     }
+
 
     /**
      * Display the specified resource.
@@ -63,7 +72,7 @@ class CatalogueController extends Controller
     public function storeFile(Request $request, $catalogueId)
     {
         $request->validate([
-            'file' => 'required|mimes:pdf|max:2048',
+            'file' => 'required|mimes:pdf|max:40960',
             'user_id' => 'required|string'
         ]);
 
@@ -74,7 +83,15 @@ class CatalogueController extends Controller
             ->where('status', 'visible')
             ->update(['status' => 'expired']);
 
-        $filePath = $request->file('file')->store('catalogue_files', 'public');
+        // Generate unique file name
+        $file = $request->file('file');
+        $fileName = time() . '_' . $file->getClientOriginalName();
+
+        // Move file to public/catalogue_files
+        $file->move(public_path('catalogue_files'), $fileName);
+
+        // File path relative to public directory
+        $filePath = 'catalogue_files/' . $fileName;
 
         // Save new file as visible
         CatalogueFile::create([
@@ -86,6 +103,7 @@ class CatalogueController extends Controller
 
         return redirect()->back()->with('success', 'New catalogue file uploaded.');
     }
+
     /**
      * Show the form for editing the specified resource.
      */

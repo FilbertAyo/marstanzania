@@ -14,7 +14,7 @@
                         <div class="card-body">
                             <h4 class="mb-3">{{ $catalogue->name }}</h4>
                             @if ($catalogue->logo)
-                                <img src="{{ asset('storage/' . $catalogue->logo) }}" alt="{{ $catalogue->name }}"
+                                <img src="{{ asset( $catalogue->logo) }}" alt="{{ $catalogue->name }}"
                                     class="img-fluid" style="height: 150px; object-fit: contain;">
                             @else
                                 <p>No Logo</p>
