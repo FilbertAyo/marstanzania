@@ -13,7 +13,7 @@
 
         @include('partials.services')
 
-        @include('partials.video')
+        {{-- @include('partials.video') --}}
 
         @include('partials.choose')
 
