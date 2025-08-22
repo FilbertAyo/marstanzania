@@ -16,12 +16,9 @@ class CatalogueController extends Controller
         ]);
     }
 
-    /**
-     * Fetch catalogue data from the external API and normalize asset URLs.
-     */
     private function fetchCatalogues(): array
     {
-        $baseUrl = Config::get('services.catalogue_api.base_url', 'http://192.168.1.61:8000');
+        $baseUrl = Config::get('services.catalogue_api.base_url', 'https://marscommltd.com');
         $timeoutSeconds = (int) Config::get('services.catalogue_api.timeout', 10);
 
         // Assume default Laravel api.php prefix

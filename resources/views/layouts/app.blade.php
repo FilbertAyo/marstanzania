@@ -53,7 +53,7 @@
     @vite('resources/src/css/tailwind.css')
     @livewireStyles
 
-   
+
 </head>
 
 <body>

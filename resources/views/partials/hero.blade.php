@@ -6,13 +6,11 @@
                 <div class="scroll-revealed mx-auto max-w-[780px] text-center">
                     <h1
                         class="mb-6 text-3xl font-bold leading-snug text-primary-color sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-tight">
-                        Transform Your Home
-                        with the Latest in Electronics
+                        {{ $hero['hero_title'] ?? 'Default Title' }}
                     </h1>
 
                     <p class="mx-auto mb-9 max-w-[600px] text-base text-primary-color sm:text-lg sm:leading-normal">
-                        Bringing the world’s best electronics to your home. Discover quality, reliability, and
-                        unbeatable service with Mars Communications Limited.
+                        {{ $hero['hero_text'] }}
                     </p>
 
                     <ul class="mb-10 flex flex-wrap items-center justify-center gap-4 md:gap-5">
@@ -54,7 +52,7 @@
             <div class="w-full px-5">
                 <div class="scroll-revealed relative z-10 mx-auto max-w-[845px]">
                     <figure class="mt-16">
-                        <img src="{{ asset('assets/img/hero12.png') }}" alt="Hero image"
+                        <img src="{{ asset($hero['hero_image']) }}" alt="Hero image"
                             class="mx-auto max-w-full rounded-t-xl rounded-tr-xl" />
                     </figure>
 

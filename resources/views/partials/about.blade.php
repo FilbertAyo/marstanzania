@@ -4,7 +4,7 @@
             <!-- Image -->
             <div class="w-full">
                 <figure class="scroll-revealed max-w-[480px] mx-auto">
-                    <img src="{{ asset('assets/img/about.jpeg') }}" alt="About image" class="rounded-xl" />
+                    <img src="{{ asset($hero['about_image']) }}" alt="About image" class="rounded-xl" />
                 </figure>
             </div>
 
@@ -62,7 +62,7 @@
                             <li>Reliable after-sales support and warranty services for all our products.</li>
                             <li>Customer-focused service with fast delivery and excellent product knowledge.</li>
                         </ul>
-                       
+
                     </div>
 
                     <!-- Vision Tab -->

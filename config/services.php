@@ -37,7 +37,7 @@ return [
 
     // External Catalogue API configuration
     'catalogue_api' => [
-        'base_url' => env('CATALOGUE_API_BASE_URL', 'http://192.168.1.61:8000'),
+        'base_url' => env('CATALOGUE_API_BASE_URL', 'https://marscommltd.com'),
         'timeout' => env('CATALOGUE_API_TIMEOUT', 10),
     ],
 

@@ -23,7 +23,7 @@
 
         {{-- @include('partials.team') --}}
 
-        @include('partials.testimonial')
+        {{-- @include('partials.testimonial') --}}
 
         @include('partials.faq')
 
