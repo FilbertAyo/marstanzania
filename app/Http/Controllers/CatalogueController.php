@@ -18,7 +18,7 @@ class CatalogueController extends Controller
 
     private function fetchCatalogues(): array
     {
-        $baseUrl = Config::get('services.catalogue_api.base_url', 'https://marscommltd.com');
+        $baseUrl = Config::get('services.catalogue_api.base_url', 'https://portal.marscommltd.com');
         $timeoutSeconds = (int) Config::get('services.catalogue_api.timeout', 10);
 
         // Assume default Laravel api.php prefix

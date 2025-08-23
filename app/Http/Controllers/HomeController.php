@@ -11,7 +11,7 @@ class HomeController extends Controller
     public function index()
     {
         // Base URL from config (services.php)
-        $baseUrl = Config::get('services.catalogue_api.base_url', 'https://marscommltd.com');
+        $baseUrl = Config::get('services.catalogue_api.base_url', 'https://portal.marscommltd.com');
         $timeoutSeconds = (int) Config::get('services.catalogue_api.timeout', 10);
 
         // Call the API endpoint
