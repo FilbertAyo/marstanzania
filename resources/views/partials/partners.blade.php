@@ -17,7 +17,7 @@
                 @foreach ($partners as $partner)
                     <div class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3">
                         <img src="{{ asset($partner['logo']) }}" alt="Brand Logo Image"
-                            class="h-[80px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0" />
+                            class="h-[80px] inline-block " />
                     </div>
                 @endforeach
 

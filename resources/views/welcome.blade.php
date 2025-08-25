@@ -9,21 +9,20 @@
     <main class="main relative">
 
         @include('partials.hero')
+
         @include('partials.about')
+        @include('partials.offer')
 
         @include('partials.services')
+        @include('partials.branches')
 
         @include('partials.video')
-
         @include('partials.choose')
-
         {{-- @include('partials.pricing') --}}
 
         @include('partials.action')
 
-        {{-- @include('partials.team') --}}
 
-        {{-- @include('partials.testimonial') --}}
 
         @include('partials.faq')
 
@@ -32,6 +31,8 @@
         @include('partials.partners')
 
         @include('partials.contact')
+
+        @include('partials.location')
 
 
     </main>

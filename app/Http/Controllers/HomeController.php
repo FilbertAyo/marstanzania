@@ -42,7 +42,10 @@ class HomeController extends Controller
 
         $faqsResponse = Http::timeout($timeoutSeconds)->get($baseUrl . '/api/website/faqs');
         $faqs = $faqsResponse->successful() ? $faqsResponse->json() : [];
+
+        $branchesResponse = Http::timeout($timeoutSeconds)->get($baseUrl . '/api/website/branches');
+        $branches = $branchesResponse->successful() ? $branchesResponse->json() : [];
         // Pass to Blade
-        return view("welcome", compact('hero', 'services', 'partners', 'faqs'));
+        return view("welcome", compact('hero', 'services', 'partners', 'faqs','branches'));
     }
 }

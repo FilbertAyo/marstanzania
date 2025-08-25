@@ -114,7 +114,7 @@
                     <div class="flex flex-wrap justify-center gap-x-3 md:justify-start">
                         <a href="javascript:void(0)" class="text-body-dark-11 hover:text-body-dark-12">Privacy
                             Policy</a>
-                        
+
                         <a href="javascript:void(0)" class="text-body-dark-11 hover:text-body-dark-12">Terms of
                             Service</a>
                     </div>
@@ -124,7 +124,7 @@
             <div class="w-full md:w-1/2">
                 <div class="my-1 flex justify-center md:justify-end">
                     <p class="text-body-dark-11">
-                        &#169; 2024 Filbert Ayo All rights reserved. Distributed by <a href="https://Mars communication ltd.com"
+                        &#169; 2024 Mars Tanzania All rights reserved. Distributed by <a href="https://Mars communication ltd.com"
                             target="_blank">Mars communication ltd</a>
                     </p>
                 </div>

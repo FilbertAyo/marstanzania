@@ -38,9 +38,7 @@
                             <a href="#" target="_blank" class="text-primary-color/60 hover:text-primary-color">
                                 <img src="{{ asset('assets/img/samsung.png') }}" alt="Samsung" class="h-8 sm:h-10">
                             </a>
-                            <a href="#" target="_blank" class="text-primary-color/60 hover:text-primary-color">
-                                <img src="{{ asset('assets/img/lg.png') }}" alt="LG" class="h-8 sm:h-10">
-                            </a>
+                          
                             <a href="#" target="_blank" class="text-primary-color/60 hover:text-primary-color">
                                 <img src="{{ asset('assets/img/toshiba.png') }}" alt="Toshiba" class="h-8 sm:h-10">
                             </a>
