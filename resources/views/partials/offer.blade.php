@@ -23,13 +23,13 @@
           <div class="swiper mySwiper rounded-lg shadow-lg">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <img src="assets/img/offer1.jpg" alt="Deal 1" class="w-full h-[300px] object-cover rounded-lg">
+                <img src="{{ asset('assets/img/offer1.jpg') }}" alt="Deal 1" class="w-full h-[300px] object-cover rounded-lg">
               </div>
               <div class="swiper-slide">
-                <img src="assets/img/offer2.jpg" alt="Deal 2" class="w-full h-[300px] object-cover rounded-lg">
+                <img src="{{ asset('assets/img/offer2.jpg') }}" alt="Deal 2" class="w-full h-[300px] object-cover rounded-lg">
               </div>
               <div class="swiper-slide">
-                <img src="assets/img/offer3.jpg" alt="Deal 3" class="w-full h-[300px] object-cover rounded-lg">
+                <img src="{{ asset('assets/img/offer3.jpg') }}" alt="Deal 3" class="w-full h-[300px] object-cover rounded-lg">
               </div>
             </div>
             <div class="swiper-pagination"></div>
